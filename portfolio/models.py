@@ -6,3 +6,6 @@ class Project(models.Model):
     image = models.ImageField(upload_to='portfolio/images/') # для имаджей с указанием где сохранять и размеров
     url = models.URLField(blank=True) # blank = true это по клику на новую страницу
 
+    def __str__(self): # функция отобразит вместо blog его название
+        return self.title
+

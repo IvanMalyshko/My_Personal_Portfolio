@@ -1,4 +1,18 @@
-<h1>Hi, thesis my portfolio</h1>
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+    <h1>Hi, this is my portfolio</h1>
+
+
+<br>
+
+{% load static %}
+
+
+<br>
+
+<img src="{% static 'portfolio/foto.jpg' %}" height=40% width=15%>
+
 {% for project in projects %}
 
 <h2>{{ project.title }}</h2>
@@ -8,3 +22,5 @@
 <br><a href="{{ project.url }}">Link</a>
 {% endif %}
 {% endfor %}
+
+{% endblock %}
